@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAR Hotel</title>
+  <script src="https://kit.fontawesome.com/d52215e960.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  
+
+    
+    
+
+  <div class="landing-div">
+    <div class="hero-text-div">
+      <h1 class="hero-text">A place where you can relax and unwind.</h1>
+      <button id="checkRooms">Check Rooms</button>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-navbar">
+      <div class="container div-navbar">
+        <a class="navbar-brand" href="#"><img src="assets/images/farlogo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Amenities and Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BOOK NOW</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+  </div>
+
+  <div class="book-div">
+    <form method="#" action="#">
+      <div class="book-input-div">
+        
+        <div>
+          <label for="checkIn">Check-in: </label>
+          <input type="date" id="checkIn" name="checkIn" required>
+        </div>
+        <div>
+          <label for="checkOut">Check-out: </label>
+          <input type="date" id="checkOut" name="checkOut" required>
+        </div>
+        <div>
+        <label for="rooms" class="label-rooms">Rooms:</label>
+        <input type="number" id="rooms" name="rooms" min="1" max="10">
+        </div>
+        <div>
+        <label for="adults" class="label-adults">Adults:</label>
+        <input type="number" id="adults" name="adults" min="1" max="20" >
+        </div>
+        <div>
+          <label></label><br>
+        <input type="submit" value="Check Availability" id="checkBtn">
+        </div>
+      </div>
+    </form>
+  </div>
+    
+
+    
+ 
+  
+
+  <div class="container py-5">
+    <h1>FAR Hotel</h1>
+    <div class="row aboutus-row">
+      <div class="col-12 col-md-6 col-lg-6 aboutus-col">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequuntur recusandae sit harum quis et impedit. At veniam, harum laudantium vero ab unde nobis incidunt et inventore. Quis, totam accusantium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem distinctio ipsum esse! Voluptate numquam, velit molestiae voluptates vitae ratione at odio omnis ipsum sapiente eum alias. Fugiat iste a tempora.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 aboutus-col">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequuntur recusandae sit harum quis et impedit. At veniam, harum laudantium vero ab unde nobis incidunt et inventore. Quis, totam accusantium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem distinctio ipsum esse! Voluptate numquam, velit molestiae voluptates vitae ratione at odio omnis ipsum sapiente eum alias. Fugiat iste a tempora.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROMO SECTION -->
+  <div class="container py-5">
+    <h1>Our Best Offers For You</h1>
+    <div class="row promo-row">
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-3 promo-col">
+        <div class="promo-card">
+          <img src="assets/images/promo1.png" class="card-img-top" alt="3 Nights stay free 1 Night">
+              <div class="promo-body">
+                <h3 class="promo-title">3 Nights stay free 1 Night</h3>
+                <p class="promo-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis, harum molestias aliquam hic maiores rerum quibusdam.
+                </p>
+                <div class="promo-button">
+                  <button id="promoBtn">Check</button>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-3 promo-col">
+        <div class="promo-card">
+          <img src="assets/images/promo2.png" class="card-img-top" alt="3 Nights stay free 1 Night">
+              <div class="promo-body">
+                <h3 class="promo-title">Free Buffet on Your Birthday!</h3>
+                <p class="promo-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis, harum molestias aliquam hic maiores rerum quibusdam.
+                </p>
+                <div class="promo-button">
+                  <button id="promoBtn">Check</button>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-3 promo-col">
+        <div class="promo-card">
+          <img src="assets/images/promo3.png" class="card-img-top" alt="3 Nights stay free 1 Night">
+              <div class="promo-body">
+                <h3 class="promo-title">Book Online For Less 10%</h3>
+                <p class="promo-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis, harum molestias aliquam hic maiores rerum quibusdam.
+                </p>
+                <div class="promo-button">
+                  <button id="promoBtn">Check</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>  
+
+  <!-- FEATURED ROOMS SECTION -->
+  <div class="container py-5">
+    <h1>Featured Rooms</h1>
+    <div class="row rooms-row">
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-3 rooms-col">
+        <div class="rooms-card">
+          <img src="assets/images/presidential.png" class="card-img-top" alt="Deluxe Room">
+              <div class="rooms-body">
+                <h3 class="rooms-title">Presidential Room</h3>
+                <p class="rooms-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis, harum molestias aliquam hic maiores rerum quibusdam.
+                </p>
+                <div class="rooms-button">
+                  <button id="roomsBtn">Check</button>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-3 rooms-col">
+        <div class="rooms-card">
+          <img src="assets/images/executive.png" class="card-img-top" alt="Deluxe Room">
+              <div class="rooms-body">
+                <h3 class="rooms-title">Executive Room</h3>
+                <p class="rooms-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis, harum molestias aliquam hic maiores rerum quibusdam.
+                </p>
+                <div class="rooms-button">
+                  <button id="roomsBtn">Check</button>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-3 rooms-col">
+        <div class="rooms-card">
+          <img src="assets/images/deluxe.png" class="card-img-top" alt="Deluxe Room">
+              <div class="rooms-body">
+                <h3 class="rooms-title">Deluxe Room</h3>
+                <p class="rooms-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis, harum molestias aliquam hic maiores rerum quibusdam.
+                </p>
+                <div class="rooms-button">
+                  <button id="roomsBtn">Check</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>  
+
+  <!-- AMENITIES AND ACTIVITIES -->
+  <div class="container-fluid p-5">
+    <h1>Amenities and Activities</h1>
+    <div class="row amenAct-row">
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 amenAct-col">
+        <div class="amenAct-card">
+          <img src="assets/images/pool1.png" class="card-img-top" alt="Deluxe Room">
+          <button id="amenActBtn">Free Access To our Pool</button>
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 amenAct-col">
+        <div class="amenAct-card">
+          <img src="assets/images/pool1.png" class="card-img-top" alt="Deluxe Room">
+          <button id="amenActBtn">Free Access To our Pool</button>
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 amenAct-col">
+        <div class="amenAct-card">
+          <img src="assets/images/pool1.png" class="card-img-top" alt="Deluxe Room">
+          <button id="amenActBtn">Free Access To our Pool</button>
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 amenAct-col">
+        <div class="amenAct-card">
+          <img src="assets/images/pool1.png" class="card-img-top" alt="Deluxe Room">
+          <button id="amenActBtn">Free Access To our Pool</button>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>  
+
+
+  <div class="container">
+    <h1>News and Announcement</h1>
+    <div class="row newsAnn-row">
+
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 newsAnn-col">
+        <div class="newsAnn-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 newsAnn-col">
+        <div class="newsAnn-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 newsAnn-col">
+        <div class="newsAnn-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-4 col-lg-4 newsAnn-col">
+        <div class="newsAnn-card">
+          
+        </div>
+      </div>
+
+    </div>
+  </div>  
+
+  <div class="container">
+    <h1>Testimonials</h1>
+    <div class="row testi-row">
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 testi-col">
+    
+        <div class="testi-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 testi-col">
+    
+        <div class="testi-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-3 testi-col">
+    
+        <div class="testi-card">
+          
+        </div>
+      </div>
+
+    </div>
+  </div>  
+
+<!-- FOOTER -->
+  <div class="container-fluid footer-div">
+   
+    <div class="row footer-row">
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-2 footer-col">
+    
+        <div class="footer-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-2 footer-col">
+    
+        <div class="footer-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-2 footer-col">
+    
+        <div class="footer-card">
+          
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-6 col-lg-2 footer-col">
+    
+        <div class="footer-card">
+          
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* about us */
+.aboutus-row {
+  height: 50vh;
+}
+
+
+/* PROMO */
+.promo-row {
+  height: 50vh;
+  justify-content: center;
+
+
+}
+
+.promo-col {
+  background-color: var(--darkblue);
+margin: 0 2rem;
+}
+
+/* ROOMS */
+.rooms-row {
+  height: 50vh;
+ justify-content: center;
+
+}
+
+.rooms-col {
+  background-color: var(--darkblue);
+margin: 0 2rem;
+}
+
+/* AMENITIES AND ACTIVITIES */
+.amenAct-row {
+  height: 50vh;
+ justify-content: center;
+
+}
+
+.amenAct-col {
+  background-color: var(--darkblue);
+margin: 0 2rem;
+}
+
+/* New and Announcement */
+.newsAnn-row {
+  height: 50vh;
+ justify-content: center;
+}
+
+.newsAnn-col {
+  background-color: var(--darkblue);
+  margin: 1rem 2rem;
+}
+
+/* TESTIMONIALS */
+.testi-row {
+  height: 50vh;
+ justify-content: center;
+}
+
+.testi-col {
+  background-color: var(--darkblue);
+  margin: 1rem 2rem;
+}
+
+/* FOOTER */
+
+.footer-div {
+  background-color: var(--darkblue);
+  padding: 2rem 1rem;
+}
+
+.footer-row {
+  height: 50vh;
+ justify-content: center;
+}
+
+.footer-col {
+  background-color: var(--gold);
+  margin: 1rem 2rem;
+}
