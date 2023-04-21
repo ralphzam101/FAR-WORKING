@@ -10,13 +10,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <script src="assets/script/script.js" defer></script>
 
 
   <div class="landing-div">
-    <div class="hero-text-div">
-      <h1 class="hero-text">Experience comfort and luxury at its finest.</h1>
-      <button id="bookNow">Book Now</button>
-    </div>
+   
     <nav class="navbar navbar-expand-lg bg-navbar">
       <div class="container div-navbar">
         <a class="navbar-brand" href="#"><img src="assets/images/farlogo.png" alt=""></a>
@@ -25,9 +23,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
+        
             <li class="nav-item">
               <a class="nav-link" href="#">Rooms</a>
             </li>
@@ -35,16 +31,47 @@
               <a class="nav-link" href="#">Promos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Amenities and Activities</a>
+              <a class="nav-link" href="#">Amenities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">BOOK NOW</a>
+              <a class="nav-link" href="#">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="bookNow" href="#">BOOK NOW</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     
+    <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="assets/images/hero6.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="assets/images/hero2.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="assets/images/hero3.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="assets/images/hero4.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="assets/images/hero5.jpg" class="d-block" alt="...">
+        </div>
+        
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
   
   <div class="book-div">
@@ -58,13 +85,17 @@
           <label for="checkOut">Check-out: </label>
           <input type="date" id="checkOut" name="checkOut" required>
         </div>
-        <div>
+        <div class="margin-1">
         <label for="rooms" class="label-rooms">Rooms:</label>
-        <input type="number" id="rooms" name="rooms" min="1" max="10">
+        <span class="minus-btn" onclick="decrementRoom()">-</span>
+        <input type="number" id="rooms" name="rooms" value="1" min="1" max="10">
+        <span class="plus-btn" onclick="incrementRoom()">+</span>
         </div>
-        <div>
+        <div class="margin-1">
         <label for="adults" class="label-adults">Adults:</label>
-        <input type="number" id="adults" name="adults" min="1" max="20" >
+        <span class="minus-btn" onclick="decrementAdult()">-</span>
+        <input type="number" id="adults" name="adults" value="1" min="1" max="20" >
+        <span class="plus-btn" onclick="incrementAdult()">+</span>
         </div>
         <div>
           <label></label><br>
@@ -74,11 +105,12 @@
     </form>
   </div>
   
-
-  <div class="container py-5">
-    <h1>FAR Hotel</h1>
+  
+  <!-- WELCOME SECTION -->
+  <div class="container-fluid py-5">
+      <h1 class="hero-text">Experience comfort and luxury at its finest.</h1>
     <div class="row aboutus-row">
-      <div class="col-12 col-md-6 col-lg-6 aboutus-col1">
+      <div class="col-12 col-md-6 col-lg-8 aboutus-col1">
         <p>Welcome to FAR hotel! We are thrilled to have you as our guest and are committed to making your stay as comfortable and enjoyable as possible. Please don't hesitate to let us know if there's anything we can do to make your stay even better. Thank you for choosing us.</p>
       </div>
       
@@ -100,25 +132,39 @@
                   Extend your stay by taking advantage of our 3 + 1 promo.
                 </p>
                 <div class="promo-button">
-                  <button id="promoBtn">Check</button>
+                  <button id="promoBtn" data-bs-toggle="modal" data-bs-target="#modalPromo1">Check</button>
                 </div>
               </div>
         </div>
-      </div>
+        <!-- MODAL PROMO 1 -->
+        <div class="modal fade" id="modalPromo1" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">3 Nights stay, free 1 Night</h1>
+              
+              </div>
+              <div class="modal-body">
+                <div class="promo-card">
+                  <img src="assets/images/promo1.png" class="card-img-top" alt="3 Nights stay free 1 Night">
+                      <div class="promo-body">
+                        <h3 class="promo-title">3 Nights stay, free 1 Night</h3>
+                        <p class="promo-text">
+                          The 3 Nights stay, free 1 Night promo is a special offer where guests can book a hotel room for a minimum of three consecutive nights and receive an additional night's stay for free. This promotion is a great way for travelers to extend their trip and enjoy an extra night of accommodation without having to pay extra.
+                        </p>
+                      </div>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                <button class="bookBtn" id="bookBtn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 promo-col">
-        <div class="promo-card">
-          <img src="assets/images/promo3.png" class="card-img-top" alt="Book Online For Less 10%">
-              <div class="promo-body">
-                <h3 class="promo-title">Book Online For Less 10%</h3>
-                <p class="promo-text">
-                  Want to save more? Book online and get 10% off on all room type. 
-                </p>
-                <div class="promo-button">
-                  <button id="promoBtn">Check</button>
-                </div>
-              </div>
-        </div>
       </div>
 
       <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 promo-col">
@@ -130,12 +176,84 @@
                   It's your birthday? It's our pleasure to celebrate your special day with us.
                 </p>
                 <div class="promo-button">
-                  <button id="promoBtn">Check</button>
+                  <button id="promoBtn" data-bs-toggle="modal" data-bs-target="#modalPromo2">Check</button>
                 </div>
               </div>
         </div>
+
+         <!-- MODAL PROMO 2 -->
+         <div class="modal fade" id="modalPromo2" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Free Buffet on Your Birthday</h1>
+              </div>
+              <div class="modal-body">
+                <div class="promo-card">
+                  <img src="assets/images/promo2.png" class="card-img-top" alt="Free Buffet on Your Birthday">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Free Buffet on Your Birthday</h3>
+                        <p class="promo-text">
+                          The offer is usually available for a limited time and may be subject to certain terms and conditions, such as a minimum purchase requirement or the need to present valid identification that shows the customer's birth date. Customers can take advantage of this promotion by visiting Far hotel on their birthday and enjoying a delicious meal at no cost.
+                        </p>
+                        
+                      </div>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                <button class="bookBtn" id="bookBtn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 promo-col">
+        <div class="promo-card">
+          <img src="assets/images/promo3.png" class="card-img-top" alt="Book Online For Less 10%">
+              <div class="promo-body">
+                <h3 class="promo-title">Book Online For Less 10%</h3>
+                <p class="promo-text">
+                  Want to save more? Book online and get 10% off on all room type.
+                </p>
+                <div class="promo-button">
+                  <button id="promoBtn" data-bs-toggle="modal" data-bs-target="#modalPromo3">Check</button>
+                </div>
+              </div>
+        </div>
+
+        <!-- MODAL PROMO 3 -->
+        <div class="modal fade" id="modalPromo3" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Book Online For Less 10%</h1>
+              </div>
+              <div class="modal-body">
+                <div class="promo-card">
+                  <img src="assets/images/promo3.png" class="card-img-top" alt="Book Online For Less 10%">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Book Online For Less 10%</h3>
+                        <p class="promo-text">
+                          This offer is typically available for a limited time and may be subject to certain terms and conditions. Customers must make their booking through the hotel or travel booking site's online platform to receive the discount. In some cases, they may be required to enter a promo code or click on a specific link to access the discount.
+                        </p>
+                      </div>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                <button class="bookBtn" id="bookBtn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>  
 
@@ -153,10 +271,57 @@
                   A luxurious and spacious hotel room designed to provide the most comfortable and extravagant accommodation possible for the highest-ranking guests.
                 </p>
                 <div class="rooms-button">
-                  <button id="roomsBtn">Check</button>
+                  <button id="roomsBtn" data-bs-toggle="modal" data-bs-target="#modalPresidential">Check</button>
                 </div>
               </div>
         </div>
+        <!-- MODAL PRESIDENTIAL SUITE -->
+        <div class="modal fade modal-xl " id="modalPresidential" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Presidential Suite</h1>
+              </div>
+              <div class="modal-body modal-room">
+                <div class="room-card">
+                  <img src="assets/images/presidential.png" class="card-img-top" alt="Presidential Suite">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Presidential Suite</h3>
+                        <p class="promo-text">
+                          Lavishly decorated with state-of-the-art amenities, The Presidential Suite offers a luxurious and exclusive accommodation. Spanning 395 square-meter, experience luxury with highest levels of elegance, sophistication, and comfort from Solaire's brand of excellent service and Filipino hospitality.
+                        </p>
+                    
+                      </div>
+                </div>
+                <div class="modal-hotel-div">
+                  <h4>Hotel Inclusion</h4>
+                  <p><img src="assets/images/aircon.png"> 24/7 Aircon</p>
+                  <p><img src="assets/images/wifi.png"> 5G Wifi Connectivity</p>
+                  <p><img src="assets/images/shower.png"> Hot and Cold Shower</p>
+                  <p><img src="assets/images/bathtub.png"> Bath Tub and Jaccusi</p>
+                  <p><img src="assets/images/bfast.png"> Breakfast Included</p>
+                  <p><img src="assets/images/pool.png"> Pool Access</p>
+
+                  <h4>Room Features</h4>
+                  <ul>
+                    <li>Vanity area/sitting room and 8-seater dining/meeting area</li>
+                    <li>Single console-control system for curtains, lighting and TV</li>
+                    <li>Entertainment room with equipment controlled with an iPad</li>
+                    <li>Bathrooms have separate rain shower and flat screen TV</li>
+                    <li>Spacious walk-in closet</li>
+                  </ul>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                <button class="bookBtn" id="bookBtn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 rooms-col">
@@ -168,10 +333,58 @@
                   A spacious and comfortable hotel room that is typically larger than a standard hotel room and offers additional amenities designed for business travelers.
                 </p>
                 <div class="rooms-button">
-                  <button id="roomsBtn">Check</button>
+                  <button id="roomsBtn" data-bs-toggle="modal" data-bs-target="#modalExecutive">Check</button>
                 </div>
               </div>
         </div>
+        <!-- MODAL EXECUTIVE SUITE -->
+        <div class="modal fade modal-xl " id="modalExecutive" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Executive Suite</h1>
+              </div>
+              <div class="modal-body modal-room">
+                <div class="room-card">
+                  <img src="assets/images/executive.png" class="card-img-top" alt="Executive Suite">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Executive Suite</h3>
+                        <p class="promo-text">
+                          The Executive Suite is a spacious and well-appointed hotel room that is designed for guests who require extra space and amenities for work or relaxation during their stay. This room category is often the preferred choice for business travelers, as it provides a comfortable and functional workspace, as well as luxurious amenities for relaxation.
+                        </p>
+                    
+                      </div>
+                </div>
+                <div class="modal-hotel-div">
+                  <h4>Hotel Inclusion</h4>
+                  <p><img src="assets/images/aircon.png"> 24/7 Aircon</p>
+                  <p><img src="assets/images/wifi.png"> 5G Wifi Connectivity</p>
+                  <p><img src="assets/images/shower.png"> Hot and Cold Shower</p>
+                  <p><img src="assets/images/bathtub.png"> Bath Tub</p>
+                  <p><img src="assets/images/bfast.png"> Breakfast Included</p>
+                  <p><img src="assets/images/pool.png"> Pool Access</p>
+                
+                  <h4>Room Features</h4>
+                  <ul>
+                    <li> king-size bed or 2 double beds with 350-thread count linens</li>
+                    <li>47” flat LCD screen television with dedicated international and local HDTV channels</li>
+                    <li>Spacious work place</li>
+                    <li>Separate shower stall and bath tub</li>
+                    <li>In-room coffee and tea making facility</li>
+                  </ul>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                <button class="bookBtn" id="bookBtn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
       <div class="col-12 col-sm-10 col-md-6 col-lg-4 col-xl-3 rooms-col">
@@ -183,10 +396,57 @@
                   A hotel room that offers a higher level of comfort and luxury. It typically features upgraded amenities and furnishings, and is larger in size than a standard room.
                 </p>
                 <div class="rooms-button">
-                  <button id="roomsBtn">Check</button>
+                  <button id="roomsBtn" data-bs-toggle="modal" data-bs-target="#modalDeluxe">Check</button>
                 </div>
               </div>
         </div>
+        <!-- MODAL DELUXE SUITE -->
+        <div class="modal fade modal-xl " id="modalDeluxe" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Deluxe Suite</h1>
+              </div>
+              <div class="modal-body modal-room">
+                <div class="room-card">
+                  <img src="assets/images/deluxe.png" class="card-img-top" alt="Deluxe Suite">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Deluxe Suite</h3>
+                        <p class="promo-text">
+                          The Deluxe Suite often features a separate seating area with a sofa, armchairs, and a coffee table, providing guests with a cozy and inviting space to relax and unwind. The bedroom area typically includes a king-sized bed with premium linens and pillows, ensuring a comfortable and restful night's sleep.
+                        </p>
+                    
+                      </div>
+                </div>
+                <div class="modal-hotel-div">
+                  <h4>Hotel Inclusion</h4>
+                  <p><img src="assets/images/aircon.png"> 24/7 Aircon</p>
+                  <p><img src="assets/images/wifi.png"> 5G Wifi Connectivity</p>
+                  <p><img src="assets/images/shower.png"> Hot and Cold Shower</p>
+                  <p><img src="assets/images/bathtub.png"> Bath Tub</p>
+                  <p><img src="assets/images/bfast.png"> Breakfast Included</p>
+                  <p><img src="assets/images/pool.png"> Pool Access</p>
+                
+                  <h4>Room Features</h4>
+                  <ul>
+                    <li> king-size bed or 2 double beds with 350-thread count linens</li>
+                    <li>47” flat LCD screen television with dedicated international and local HDTV channels</li>
+                    <li>Spacious work place</li>
+                    <li>Separate shower stall and bath tub</li>
+                    <li>In-room coffee and tea making facility</li>
+                  </ul>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+                <button class="bookBtn" id="bookBtn">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       
     </div>
@@ -341,13 +601,22 @@
 
       <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">
         <div class="footer-title">
-          <h4>Featured Rooms</h4>
+          <h4>Rooms</h4>
         </div>
         <div class="footer-text">
           <a href=""><h5>Presidential Room</h5></a>
           <a href=""><h5>Executive Room</h5></a>
           <a href=""><h5>Deluxe Room</h5></a>
         </div> 
+        <br>
+        <div class="footer-title">
+          <h4>Offers</h4>
+        </div>
+        <div class="footer-text">
+          <a href=""><h5>3 Nights stay, free 1 Night</h5></a>
+          <a href=""><h5>Book Online For Less 10%</h5></a>
+          <a href=""><h5>Free Buffet on Your Birthday</h5></a>
+        </div>
       </div>
 
       <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">

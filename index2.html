@@ -24,7 +24,6 @@
   <button class="minus-btn" onclick="decrementValue()">-</button>
   <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
   <button class="plus-btn" onclick="incrementValue()">+</button>
-  
 </div>
 
 <script>
@@ -42,3 +41,59 @@ function decrementValue() {
     document.getElementById('quantity').value = value < 1 ? 1 : value;
 }
 </script>
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="4000">
+      <img src="assets/images/hero6.jpg" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="assets/images/hero2.jpg" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="assets/images/hero3.jpg" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="assets/images/hero4.jpg" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="assets/images/hero5.jpg" class="d-block" alt="...">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="hero-text-div">
+  <h1 class="hero-text">Experience comfort and luxury at its finest.</h1>
+  <button id="bookNow">Book Now</button>
+</div>
+
+
+
+<div class="modal-hotel-div">
+  <h4>Hotel Inclusion</h4>
+  <p><img src="assets/images/aircon.png"> 24/7 Aircon</p>
+  <p><img src="assets/images/wifi.png"> 5G Wifi Connectivity</p>
+  <p><img src="assets/images/shower.png"> Hot and Cold Shower</p>
+  <p><img src="assets/images/bathtub.png"> Bath Tub</p>
+  <p><img src="assets/images/bfast.png"> Breakfast Included</p>
+  <p><img src="assets/images/pool.png"> Pool Access</p>
+
+  <h4>Room Features</h4>
+  <ul>
+    <li> king-size bed or 2 double beds with 350-thread count linens</li>
+    <li>47” flat LCD screen television with dedicated international and local HDTV channels</li>
+    <li>Spacious work place</li>
+    <li>Separate shower stall and bath tub</li>
+    <li>In-room coffee and tea making facility</li>
+  </ul>
+</div>
