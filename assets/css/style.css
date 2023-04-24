@@ -24,6 +24,11 @@ html, body {
   --white: #fffefe;
 }
 
+hr {
+margin: 0 2rem;
+color: gray;
+}
+
 /* NAV */
 .bg-navbar{
   height: 12vh;
@@ -140,6 +145,7 @@ div .minus-btn, div .plus-btn{
   justify-content: center;
   align-items: center;
   color: var(--white);
+  background-color: transparent;
 }
 .margin-1 {
   margin: 0 2px;
@@ -298,11 +304,6 @@ input[type="submit"]:hover {
 
 
 
-
-
-
-
-
 /* ROOMS */
 .rooms-row {
  justify-content: center;
@@ -323,7 +324,6 @@ margin: 0 10px;
 }
 .modal-hotel-div p img {
   height: 30px;
-  
 }
 
 
@@ -363,6 +363,13 @@ margin: 0 10px;
 }
 
 
+/* ACTIVITIES MODAL */
+.act-card img {
+  height: 280px;
+  width: 280px;
+  padding: 5px;
+}
+
 /* NEWS AND ANNOUNCEMENT SECTION */
 .newsAnn-row {
   justify-content: center;
@@ -381,6 +388,36 @@ margin: 0 10px;
 .newsAnn-body p {
   font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
 }
+
+
+/* MAP SECTION */
+.map-row {
+  justify-content: center;
+
+}
+
+.map-text h5 {
+  text-align: left;
+  font-size: 16px;
+}
+
+.map-text h4 {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.map-text h3, .map-col h3 {
+  padding: 10px 0;
+ font-weight: 600;
+}
+
+.div-map iframe{
+  height: 280px;
+  width: 280px;
+  margin: 5px;
+}
+
 
 
 /* TESTIMONIALS */
@@ -408,7 +445,6 @@ margin: 0 10px;
   background-color: var(--white);
   padding: 0 5px;
 }
-
 
 
 /* FOOTER */
@@ -461,7 +497,6 @@ margin: 0 10px;
 .footer-text2 h5 :hover {
   color: var(--white);
 }
-
 
 
 /* LABEL TEXT */
@@ -528,12 +563,9 @@ margin: 0 10px;
     transform: translate(0, 0);
   }
 
-  /* #rooms, #adults, .label-rooms, .label-adults, div .minus-btn, div .plus-btn {
-    display: none;
- } */
  .margin-1 {
     display: none;
- }
+  }
  
 }
 

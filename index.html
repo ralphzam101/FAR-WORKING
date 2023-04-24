@@ -25,16 +25,16 @@
           <ul class="navbar-nav">
         
             <li class="nav-item">
-              <a class="nav-link" href="#">Rooms</a>
+              <a class="nav-link" href="#roomLink">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Promos</a>
+              <a class="nav-link" href="#promoLink">Promos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Amenities</a>
+              <a class="nav-link" href="#aaLink">Amenities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Activities</a>
+              <a class="nav-link" href="#aaLink">Activities</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="bookNow" href="#">BOOK NOW</a>
@@ -83,19 +83,19 @@
         </div>
         <div>
           <label for="checkOut">Check-out: </label>
-          <input type="date" id="checkOut" name="checkOut" required>
+          <input type="date" id="checkOut" name="checkOut" required >
         </div>
         <div class="margin-1">
         <label for="rooms" class="label-rooms">Rooms:</label>
-        <span class="minus-btn" onclick="decrementRoom()">-</span>
-        <input type="number" id="rooms" name="rooms" value="1" min="1" max="10">
-        <span class="plus-btn" onclick="incrementRoom()">+</span>
+        <button class="minus-btn" onclick="decrementRoom()">-</button>
+        <input type="text" id="rooms" name="rooms" value="1" min="1" max="10" readonly>
+        <button class="plus-btn" onclick="incrementRoom()">+</button>
         </div>
         <div class="margin-1">
         <label for="adults" class="label-adults">Adults:</label>
-        <span class="minus-btn" onclick="decrementAdult()">-</span>
-        <input type="number" id="adults" name="adults" value="1" min="1" max="20" >
-        <span class="plus-btn" onclick="incrementAdult()">+</span>
+        <button class="minus-btn" onclick="decrementAdult()">-</button>
+        <input type="number" id="adults" name="adults" value="1" min="1" max="20" readonly>
+        <button class="plus-btn" onclick="incrementAdult()">+</button>
         </div>
         <div>
           <label></label><br>
@@ -117,7 +117,9 @@
     </div>
   </div>
   
+  <hr id="promoLink"> <!-- LINK DIRECT TO PROMO SECTION -->
 
+  
   <!-- PROMO SECTION -->
   <div class="container py-5">
     <h1>Our Best Offers For You</h1>
@@ -182,7 +184,7 @@
         </div>
 
          <!-- MODAL PROMO 2 -->
-         <div class="modal fade" id="modalPromo2" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="modalPromo2" tabindex="-1" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -256,6 +258,9 @@
 
     </div>
   </div>  
+
+  <hr id="roomLink"> <!-- LINK DIRECT TO ROOMS SECTION -->
+  
 
   <!-- FEATURED ROOMS SECTION -->
   <div class="container py-5">
@@ -452,6 +457,9 @@
     </div>
   </div>  
 
+  <hr  id="aaLink">  <!-- LINK DIRECT TO ACT AND AMEN SECTIONS -->
+ 
+
   <!-- AMENITIES AND ACTIVITIES -->
   <div class="container-fluid p-5">
     <h1>Amenities and Activities</h1>
@@ -460,33 +468,157 @@
       <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-2 amenAct-col">
         <div class="amenAct-card">
           <img src="assets/images/pool1.png" class="card-img-top" alt="Free Access To our Pool">
-          <button id="amenActBtn">Free Access to our Pool</button>
+          <button id="amenActBtn" data-bs-toggle="modal" data-bs-target="#poolBtn">Free Access to our Pool</button>
+        </div>
+
+        <!--  MODAL FOR POOL ACCESS-->
+        <div class="modal fade" id="poolBtn" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Free Access to our Pool</h1>
+              </div>
+              <div class="modal-body">
+                <div class="promo-card">
+                  <img src="assets/images/pool1.png" class="card-img-top">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Free Access to our Pool</h3>
+                        <p class="promo-text">
+                          This amenity is available to all guests of the hotel, regardless of their room type or length of stay. Hotel pools can be an excellent way to relax and unwind. The pool is open from 7:00 am to 9:00pm daily
+                        </p>
+                      </div>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-2 amenAct-col">
         <div class="amenAct-card">
           <img src="assets/images/gym.png" class="card-img-top" alt="Free Access to our Gym">
-          <button id="amenActBtn">Free Access to our Gym</button>
+          <button id="amenActBtn" data-bs-toggle="modal" data-bs-target="#gymBtn">Free Access to our Gym</button>
+        </div>
+
+        <!--  MODAL FOR GYM ACCESS-->
+        <div class="modal fade" id="gymBtn" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Free Access to our Gym</h1>
+              </div>
+              <div class="modal-body">
+                <div class="promo-card">
+                  <img src="assets/images/gym.png" class="card-img-top">
+                      <div class="promo-body">
+                        <h3 class="promo-title"></h3>Free Access to our Gym</h3>
+                        <p class="promo-text">
+                          This amenity typically includes access to a range of workout equipment, such as cardio machines, weights, and resistance training equipment. Many hotels offer modern and well-equipped gyms, which can be a great way for travelers to maintain their fitness routines while on the road. The gym is open from 7:00 am to 9:00pm daily.
+                        </p>
+                      </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-2 amenAct-col">
         <div class="amenAct-card">
           <img src="assets/images/van.png" class="card-img-top" alt="Free Shuttle to Airport">
-          <button id="amenActBtn">Free Shuttle</button>
+          <button id="amenActBtn" data-bs-toggle="modal" data-bs-target="#shuttleBtn">Free Shuttle</button>
+        </div>
+
+        <!--  MODAL FOR FREE SHUTTLE-->
+        <div class="modal fade" id="shuttleBtn" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Free Shuttle</h1>
+              </div>
+              <div class="modal-body">
+                <div class="promo-card">
+                  <img src="assets/images/van.png" class="card-img-top">
+                      <div class="promo-body">
+                        <h3 class="promo-title"></h3>Free Shuttle</h3>
+                        <p class="promo-text">
+                          This amenity is typically available to all guests of the hotel and may include transportation to and from nearby airports, local attractions, shopping centers, and other popular destinations.
+                        </p>
+                      </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-2 amenAct-col">
         <div class="amenAct-card">
-          <img src="assets/images/manila.png" class="card-img-top" alt="Manila City Tour">
-          <button id="amenActBtn">Manila City Tour</button>
+          <img src="assets/images/manila.png" class="card-img-top" alt="Manila City Tour" >
+          <button id="amenActBtn" data-bs-toggle="modal" data-bs-target="#manilaTour">Manila City Tour</button>
+        </div>
+
+        <!-- MODAL CITY TOUR -->
+        <div class="modal fade modal-xl " id="manilaTour" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="assets/images/farlogo.png" alt="">
+                <h1 class="modal-title fs-5">Manila City Tour</h1>
+              </div>
+              <div class="modal-body modal-act">
+                <div class="act-card">
+                  <img src="assets/images/rizal.jpg">
+                  <img src="assets/images/oceanpark.jpg">
+                  <img src="assets/images/museum.jpg">
+                  <img src="assets/images/zoo.jpg">
+                  <img src="assets/images/intram.jpg">
+                  <img src="assets/images/fort.jpg">
+                      <div class="promo-body">
+                        <h3 class="promo-title">Manila City Tour</h3>
+                        <p class="promo-text">
+                          Manila is the capital city of the Philippines and is rich in history and culture. There are many places to visit in Manila, ranging from historical landmarks to modern shopping malls. Here are some popular attractions you might consider visiting during a Manila city tour
+                        </p>
+                      </div>
+                </div>
+
+                <div class="modal-hotel-div">
+                  <h4>Places to Visit</h4>
+                  <ul>
+                    <li>Rizal Park</li>
+                    <li>Manila Ocean Park</li>
+                    <li>National Museum</li>
+                    <li>Manila Zoo</li>
+                    <li>Intramuros</li>
+                    <li>Fort Santiago</li>
+                  </ul>
+                </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button class="closeBtn" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    
     </div>
   </div>  
+
+  <hr>
 
   <!-- NEWS AND ANNOUNCEMENT SECTION -->
   <div class="container py-5">
@@ -517,9 +649,10 @@
               </div>
         </div>
       </div>
-
     </div>
   </div>  
+
+  <hr>
 
 
   <!-- TESTIMONIALS -->
@@ -562,7 +695,33 @@
             </div>
         </div>
       </div>
+    </div>
+  </div> 
 
+  <hr>
+
+  <!-- MAP SECTION -->
+  <div class="container py-5">
+    <div class="row map-row">
+
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 map-col">
+        <div class="map-text">
+         <h3>Contact Us</h3>
+          <h4>Cellphone:</h4>
+          <h5>(+63) 912-3456-7890</h5>
+          <h4>Telephone:</h4>
+          <h5>(02) 123-4567</h5>
+          <h4>Email:</h4>   
+          <h5>farhotelgroups@gmail.com</h5>   
+        </div>   
+      </div>
+      
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 map-col">
+        <div class="div-map">
+          <h3>Hotel Location</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d482.5942336474533!2d121.054355142288!3d14.613092212522762!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1682317665715!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>  
+      </div>
     </div>
   </div>  
 
@@ -576,12 +735,10 @@
         </div>
         <div class="footer-text">
           <h5>FAR Hotel</h5>
-          
           <a class="link">
             <h5>Address: 528 Epifanio de los Santos Ave, Cubao, Quezon City, 1109 Metro Manila</h5>
           </a>
-        
-          <h5><img src="assets/images/farlogo.png" alt=""></h5>
+          <h5><img src="assets/images/farlogo.png" alt="" href="#"></h5>
         </div> 
       </div>
 
@@ -591,10 +748,10 @@
         </div>
         <div class="footer-text">
           <a href="#"><h5>Home</h5></a>
-          <a href=""><h5>Rooms</h5></a>
-          <a href=""><h5>Promos</h5></a>
-          <a href=""><h5>Amenities</h5></a>
-          <a href=""><h5>Activities</h5></a>
+          <a href="#roomLink"><h5>Rooms</h5></a>
+          <a href="#promoLink"><h5>Promos</h5></a>
+          <a href="#aaLink"><h5>Amenities</h5></a>
+          <a href="#aaLink"><h5>Activities</h5></a>
           <a href=""><h5>Book Now</h5></a>
         </div> 
       </div>
@@ -604,29 +761,21 @@
           <h4>Rooms</h4>
         </div>
         <div class="footer-text">
-          <a href=""><h5>Presidential Room</h5></a>
-          <a href=""><h5>Executive Room</h5></a>
-          <a href=""><h5>Deluxe Room</h5></a>
+          <a href="#roomLink"><h5>Presidential Room</h5></a>
+          <a href="#roomLink"><h5>Executive Room</h5></a>
+          <a href="#roomLink"><h5>Deluxe Room</h5></a>
         </div> 
         <br>
-        <div class="footer-title">
-          <h4>Offers</h4>
-        </div>
-        <div class="footer-text">
-          <a href=""><h5>3 Nights stay, free 1 Night</h5></a>
-          <a href=""><h5>Book Online For Less 10%</h5></a>
-          <a href=""><h5>Free Buffet on Your Birthday</h5></a>
-        </div>
       </div>
 
       <div class="footer-con col-9 col-sm-6 col-md-5 col-lg-2">
         <div class="footer-title">
-          <h4>Contact us</h4>
+          <h4>Offers</h4>
         </div>
         <div class="footer-text">
-          <h5>Cellphone: (+63) 912-3456-7890</h5>
-          <h5>Telephone: (02) 123-4567</h5>
-          <h5>Email: farhotelgroups@gmail.com</h5>   
+          <a href="#promoLink"><h5>3 Nights stay, free 1 Night</h5></a>
+          <a href="#promoLink"><h5>Book Online For Less 10%</h5></a>
+          <a href="#promoLink"><h5>Free Buffet on Your Birthday</h5></a> 
         </div> 
         <br>
         <div class="footer-title">
@@ -646,7 +795,6 @@
           </h4>
         </div> 
       </div>
-
     </div>
     <hr>
 
